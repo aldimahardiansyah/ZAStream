@@ -35,5 +35,14 @@ class GenreSeeder extends Seeder
         Genre::create([
             'genre' => 'Magic'
         ]);
+        Genre::create([
+            'genre' => 'Adventure'
+        ]);
+        Genre::create([
+            'genre' => 'Superanatural'
+        ]);
+        Genre::create([
+            'genre' => 'Drama'
+        ]);
     }
 }

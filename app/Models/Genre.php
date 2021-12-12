@@ -14,6 +14,6 @@ class Genre extends Model
 
     # relasi ke model anime
     public function anime(){
-        return $this->hasMany(Anime::class);
+        return $this->hasMany(Anime::class, 'anime_genres');
     }
 }

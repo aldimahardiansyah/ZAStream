@@ -13,7 +13,7 @@ class Anime extends Model
 
     # relasi ke model genre
     public function genre(){
-        return $this->belongsToMany(Genre::class);
+        return $this->belongsToMany(Genre::class, 'anime_genres');
     }
 
     # relasi ke model status
