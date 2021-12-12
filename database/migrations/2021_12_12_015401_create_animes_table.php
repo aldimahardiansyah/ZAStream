@@ -15,6 +15,12 @@ class CreateAnimesTable extends Migration
     {
         Schema::create('animes', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('status_id');
+            $table->foreignId('genre_id');
+            $table->string('judul');
+            $table->string('cover_img');
+            $table->text('sinopsis');
+            $table->string('rating');
             $table->timestamps();
         });
     }
