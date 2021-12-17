@@ -7,6 +7,7 @@ use App\Models\Anime_genre;
 use App\Models\Genre;
 use App\Models\Status;
 use App\Models\Type;
+use App\Models\Videolink;
 use Illuminate\Http\Request;
 
 class AnimeController extends Controller
@@ -39,7 +40,8 @@ class AnimeController extends Controller
             'anime' => $anime,
             'genres' => $this->genre_by_anime_id($id),
             'type' => Type::find($anime->type_id)->type,
-            'status' => Status::find($anime->status_id)->status
+            'status' => Status::find($anime->status_id)->status,
+            'videolinks' => Videolink::where('anime_id', $id)->get()
         ]);
     }
 
@@ -53,6 +55,18 @@ class AnimeController extends Controller
             'genres' => $genre,
             'statuses' => $status,
             'types' => $types
+        ]);
+    }
+
+    public function watch($anime_id, $videolink_id){
+        $anime = Anime::find($anime_id);
+        $last_episode = Videolink::where('anime_id', $anime_id)->max('episode');
+        $videolink = Videolink::find($videolink_id);
+        return view('watch',[
+            'title' => "Nonton $anime->judul episode $videolink->episode",
+            'anime' => $anime,
+            'videolink' => $videolink,
+            'last_episode' => $last_episode
         ]);
     }
 }

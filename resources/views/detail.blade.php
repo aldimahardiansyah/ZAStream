@@ -47,7 +47,11 @@
         <div class="mt-4">
             <h6 class="p-2 fw-bold"><i class="fa fa-play-circle text-warning" style="margin-right: 10px"></i>Nonton</h6>
             <hr>
-
+            <div class="d-flex">
+                @foreach ($videolinks as $videolink)
+                    <a href="/watch/{{ $anime->id }}/{{ $videolink->id }}" class="btn btn-warning mx-2">Episode {{ $videolink->episode }}</a>
+                @endforeach
+            </div>
         </div>
     </div>
 @endsection

@@ -20,9 +20,8 @@ Route::get('/', [AnimeController::class, 'index']);
 # menampilkan detail anime
 Route::get('/detail/{id}', [AnimeController::class, 'detail']);
 
+# halaman nonton
+Route::get('/watch/{anime_id}/{videolink_id}', [AnimeController::class, 'watch']);
+
 # form menambah anime
 Route::get('/admin/add/', [AnimeController::class, 'add']);
-
-Route::get('/watch', function (){
-    return view('watch',['title' => 'coba']);
-});
