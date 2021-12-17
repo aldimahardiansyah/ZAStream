@@ -20,4 +20,9 @@ class Anime extends Model
     public function status(){
         return $this->belongsTo(Status::class);
     }
+
+    # relasi ke model type
+    public function type(){
+        return $this->belongsTo(Type::class);
+    }
 }

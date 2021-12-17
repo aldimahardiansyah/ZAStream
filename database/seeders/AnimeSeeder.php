@@ -32,6 +32,7 @@ class AnimeSeeder extends Seeder
             'cover_img' => 'https://nimegami.com/wp-content/uploads/2021/10/Mushoku-Tensei-Isekai-Ittara-Honki-Dasu-Season-2-Sub-Indo1.jpg',
             'sinopsis' => 'Tewas saat menyelamatkan orang asing dari tabrakan lalu lintas, NEET berusia 34 tahun bereinkarnasi ke dunia sihir sebagai Rudeus Greyrat, bayi yang baru lahir. Dengan pengetahuan, pengalaman, dan penyesalan dari kehidupan sebelumnya yang dipertahankan, Rudeus bersumpah untuk menjalani hidup yang memuaskan dan tidak mengulangi kesalahan masa lalunya. Sekarang diberkahi dengan kekuatan magis yang luar biasa serta pikiran orang dewasa yang sudah dewasa, Rudeus dipandang sebagai jenius dalam pembuatan oleh orang tua barunya. Segera, dia mendapati dirinya belajar di bawah para pejuang yang kuat, seperti ayah pendekar pedang dan seorang penyihir bernama Roxy Migurdia — semuanya untuk mengasah bakatnya yang tampak. Tapi meski eksteriornya polos, Rudeus tetaplah seorang otaku mesum, yang menggunakan kekayaan pengetahuannya untuk membuat gerakan pada wanita yang tidak pernah bisa dia buat di kehidupan sebelumnya. [Ditulis oleh MAL Tulis Ulang]',
             'status_id' => 1,
+            'type_id' => 1,
             'rating' => '8.35'
         ]);
         Anime_genre::create([
@@ -49,6 +50,7 @@ class AnimeSeeder extends Seeder
             'cover_img' => 'https://cdn.myanimelist.net/images/manga/1/222486.jpg',
             'sinopsis' => '“Aku akan hidup untuk diriku sendiri!” Pembunuh terhebat di Bumi hanya tahu bagaimana hidup sebagai alat bagi majikannya—sampai mereka berhenti membiarkannya hidup. Dilahirkan kembali oleh anugerah seorang dewi ke dunia pedang dan sihir, dia ditawari kesempatan untuk melakukan hal-hal yang berbeda kali ini, tapi ada masalah… Dia harus melenyapkan pahlawan super kuat yang akan membawa akhir dunia kecuali dia dihentikan. Sekarang dikenal sebagai Lugh Tuatha Dé, sang master assassin pasti sangat sibuk, terutama karena semua gadis cantik yang terus-menerus mengelilinginya. Lugh mungkin adalah pembunuh yang tak tertandingi, tetapi bagaimana dia akan melawan musuh dengan sihir yang kuat? (Sumber: Yen Press)',
             'status_id' => 1,
+            'type_id' => 1,
             'rating' => '7.09'
         ]);
         Anime::create([
@@ -59,6 +61,7 @@ class AnimeSeeder extends Seeder
             Setelah dipaksa untuk menghidupkan kembali hari yang sama yang memulai spiral ke bawah, Takemichi bertemu dengan adik Hinata. Tanpa berpikir, dia mengakui kematiannya sebelum kembali ke masa lalu. Takemichi mendesak dia untuk melindungi adiknya sebelum entah kenapa kembali ke masa depan. Ajaibnya, dia tidak mati. Lebih aneh lagi, masa depan telah berubah. Sepertinya Takemichi dapat mengubah aliran waktu. Diberi kesempatan untuk mencegah kematian tragis mantan pacarnya di tangan Geng Tokyo Manji, Takemichi memutuskan untuk terbang melintasi waktu untuk mengubah arah masa depan.
             [Ditulis oleh MAL Penulisan Ulang]',
             'status_id' => 2,
+            'type_id' => 1,
             'rating' => '8.26'
         ]);
         Anime::create([
@@ -69,6 +72,7 @@ class AnimeSeeder extends Seeder
             Akira bertekad untuk memenangkan permainan dengan kekuatan barunya dan menghancurkan organisasi. Berbekal kekuatan yang tidak diharapkan siapa pun dan keterampilan "otaknya", periode baru pertempuran intelijen dimulai!
             (Sumber: MU, diedit)',
             'status_id' => 2,
+            'type_id' => 1,
             'rating' => '6.83'
         ]);
         Anime::create([
@@ -78,6 +82,7 @@ class AnimeSeeder extends Seeder
             'sinopsis' => 'Dunia telah dilanda perang putus asa selama tiga dekade melawan BETA — spesies asing yang menginvasi planet ini pada tahun 1973. Di tengah kekacauan ini, seorang siswa sekolah menengah bernama Takeru Shirogane tiba-tiba terbangun dari mimpi buruk yang mengerikan di mana dia melihat manusia dalam kekalahan total. Segera setelah itu, dia menyadari bahwa mimpinya tidak lebih dari ingatan hidupnya di alam semesta alternatif. Dalam ingatan itu, proyek Alternatif V dilaksanakan, mengirim ratusan ribu orang ke luar angkasa sebagai upaya terakhir untuk melestarikan umat manusia, sementara meninggalkan miliaran yang tersisa di Bumi untuk mengalami nasib yang kejam. Kerinduan untuk mengubah masa depan yang suram ini, Takeru bergabung dengan pangkalan militer di Yokohama, yang kebetulan adalah bekas sekolah menengahnya. Di sana, dia berhasil meyakinkan wakil komandan pangkalan dan pemimpin proyek Alternatif IV, Profesor Yuuko Kouzuki, untuk mencegah Terjadinya Alternatif V. Untuk memastikan keberhasilan Alternatif IV, Takeru harus mengemudikan mesin humanoid raksasa Tactical Surface Fighters (TSF) bersama rekan-rekan tarunanya. Namun, dia hanya memiliki waktu dua bulan untuk menyelesaikan pelatihannya dan memanfaatkan sebagian pengetahuannya tentang masa depan — jangan sampai tragedi berikutnya terjadi.
             [Ditulis oleh MAL Penulisan Ulang]',
             'status_id' => 1,
+            'type_id' => 1,
             'rating' => '5.99'
         ]);
         Anime::create([
@@ -89,6 +94,7 @@ class AnimeSeeder extends Seeder
             Sebuah rahasia terletak di balik topeng ujian transparan kecakapan tempur yang diklaim turnamen—salah satu yang memiliki kandidat politik Korea Park Mu-Jin yang menonton setiap pertarungan dengan mata penuh harap dan lapar. Mo-Ri, Dae-Wi, dan Mi-Ra akan menemukan apa artinya menjadi Dewa SMA.
             [Ditulis oleh MAL Penulisan Ulang]',
             'status_id' => 2,
+            'type_id' => 1,
             'rating' => '7.06'
         ]);
 

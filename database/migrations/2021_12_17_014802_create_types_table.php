@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAnimesTable extends Migration
+class CreateTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,9 @@ class CreateAnimesTable extends Migration
      */
     public function up()
     {
-        Schema::create('animes', function (Blueprint $table) {
+        Schema::create('types', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('status_id');
-            $table->foreignId('genre_id');
-            $table->foreignId('type_id');
-            $table->string('judul');
-            $table->string('cover_img');
-            $table->text('sinopsis');
-            $table->string('rating');
+            $table->string('type');
             $table->timestamps();
         });
     }
@@ -33,6 +27,6 @@ class CreateAnimesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('animes');
+        Schema::dropIfExists('types');
     }
 }

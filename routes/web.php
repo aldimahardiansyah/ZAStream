@@ -16,3 +16,13 @@ use Illuminate\Support\Facades\Route;
 
 # menampilkan halaman home
 Route::get('/', [AnimeController::class, 'index']);
+
+# menampilkan detail anime
+Route::get('/detail/{id}', [AnimeController::class, 'detail']);
+
+# form menambah anime
+Route::get('/admin/add/', [AnimeController::class, 'add']);
+
+Route::get('/watch', function (){
+    return view('watch',['title' => 'coba']);
+});
