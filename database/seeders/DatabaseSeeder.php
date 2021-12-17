@@ -15,6 +15,6 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
-        $this->call([AnimeSeeder::class, GenreSeeder::class, StatusSeeder::class, TypeSeeder::class]);
+        $this->call([AnimeSeeder::class, GenreSeeder::class, StatusSeeder::class, TypeSeeder::class, VideolinkSeeder::class]);
     }
 }

@@ -25,4 +25,9 @@ class Anime extends Model
     public function type(){
         return $this->belongsTo(Type::class);
     }
+
+    # relasi ke videolink
+    public function videolink(){
+        return $this->hasMany(Videolink::class);
+    }
 }

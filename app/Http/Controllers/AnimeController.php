@@ -18,7 +18,8 @@ class AnimeController extends Controller
             'title' => 'Home',
             'animes' => $animes,
             'ongoing' => $ongoing,
-            'genre' => Genre::class
+            'genre' => Genre::class,
+            'anime_genres' => Anime_genre::class
         ]);
     }
 

@@ -1,7 +1,7 @@
 @extends('main')
 @section('content')
-    <div class="container shadow p-4 rounded">
-        <h3 class="mb-4 mx-sm-5">Tambah Anime Baru</h3>
+<div class="container shadow p-4 rounded">
+        <h3 class="mb-4"><i class="fa fa-plus-circle mx-3 text-warning"></i> Tambah Anime Baru</h3>
         <form action="/create" method="post">
             <div class="mb-3 row-12 d-sm-flex">
                 <label for="judul" class="col-form-label col-sm-2">Judul</label>

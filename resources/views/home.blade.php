@@ -16,7 +16,9 @@
                   <div class="card-body">
                     <h5 class="card-title">{{ $anime->judul }}</h5>
                     <div class="m-2">
-                      <a href="#" class="btn btn-warning rounded-pill"><small>{{ $genre::find($anime->genre_id)->genre }}</small></a>
+                      @foreach ($anime_genres::where('anime_id', $anime->id)->get() as $anime_genre)
+                          <a href="/genre/{{ $genre::find($anime_genre->genre_id)->genre }}" class="btn btn-warning btn-sm rounded-pill">{{ $genre::find($anime_genre->genre_id)->genre }}</a>
+                      @endforeach
                     </div>
                     <p class="card-text">{{ mb_strimwidth($anime->sinopsis, 0, 150, '...') }}</p>
                     <p class="card-text"><small class="text-muted">Last updated: {{ $anime->updated_at }}</small></p>
@@ -50,7 +52,9 @@
                       <h5 class="card-title">{{ $anime->judul }}</h5>
                     </a>
                     <div class="m-2">
-                      <a href="#" class="btn btn-warning rounded-pill"><small>{{ $genre::find($anime->genre_id)->genre }}</small></a>
+                      @foreach ($anime_genres::where('anime_id', $anime->id)->get() as $anime_genre)
+                          <a href="/genre/{{ $genre::find($anime_genre->genre_id)->genre }}" class="btn btn-warning btn-sm rounded-pill">{{ $genre::find($anime_genre->genre_id)->genre }}</a>
+                      @endforeach
                     </div>
                     <p class="card-text">{{ mb_strimwidth($anime->sinopsis, 0, 150, '...') }}</p>
                     <p class="card-text"><small class="text-muted">Last updated: {{ $anime->updated_at }}</small></p>
