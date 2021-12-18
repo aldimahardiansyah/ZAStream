@@ -25,3 +25,9 @@ Route::get('/watch/{anime_id}/{videolink_id}', [AnimeController::class, 'watch']
 
 # form menambah anime
 Route::get('/admin/add/', [AnimeController::class, 'add']);
+
+# hasil search
+Route::get('/search', [AnimeController::class, 'search']);
+
+# cari berdasarkan genre
+Route::get('/genre/{genre}', [AnimeController::class, 'show_by_genre']);

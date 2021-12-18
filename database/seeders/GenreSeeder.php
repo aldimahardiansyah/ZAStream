@@ -44,5 +44,11 @@ class GenreSeeder extends Seeder
         Genre::create([
             'genre' => 'Drama'
         ]);
+        Genre::create([
+            'genre' => 'School'
+        ]);
+        Genre::create([
+            'genre' => 'Slice of Life'
+        ]);
     }
 }

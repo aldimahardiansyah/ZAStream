@@ -22,14 +22,15 @@
 
     <title>ZAStream | {{ $title }}</title>
   </head>
-  <body>
+  <body style="height: 90vh">
       @include('partials.navbar')
+    <div class="d-flex flex-column justify-content-between h-100">
+      <div>
+          @yield('content')
+      </div>
 
-    <div>
-        @yield('content')
+      @include('partials.footer')
     </div>
-
-    @include('partials.footer')
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

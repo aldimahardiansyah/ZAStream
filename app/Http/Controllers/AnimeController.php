@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 class AnimeController extends Controller
 {
     public function index(){
-        $animes = Anime::all();
+        $animes = Anime::select('*')->limit(6)->get();
         $ongoing = Anime::where('status_id', 1)->get();
         return view('home', [
             'title' => 'Home',
@@ -67,6 +67,35 @@ class AnimeController extends Controller
             'anime' => $anime,
             'videolink' => $videolink,
             'last_episode' => $last_episode
+        ]);
+    }
+
+    public function search(Request $request){
+        $results = Anime::where('judul','like', "%$request->search%")->get();
+
+        return view('search', [
+            'title' => 'Hasil Pencarian',
+            'results' => $results,
+            'search' => $request->search,
+            'status' => Status::class,
+            'type' => Type::class
+        ]);
+    }
+
+    public function show_by_genre($genre){
+        $results = [];
+        $genre_id = Genre::where('genre', $genre)->first()->id;
+        $anime_genres = Anime_genre::where('genre_id', $genre_id)->get();
+        foreach($anime_genres as $anime_genre){
+            array_push($results, Anime::find($anime_genre->anime_id));
+        }
+
+        return view('search', [
+            'title' => "Kategori",
+            'results' => $results,
+            'search' => $genre,
+            'status' => Status::class,
+            'type' => Type::class
         ]);
     }
 }

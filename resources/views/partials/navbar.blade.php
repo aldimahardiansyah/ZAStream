@@ -17,9 +17,10 @@
           </li>
 
         </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-warning" type="submit">Search</button>
+        <form class="d-flex" action="/search" method="GET">
+          @csrf
+          <input class="form-control me-2" name="search" type="search" placeholder="Search Anime ...">
+          <input class="btn btn-outline-warning" type="submit" value="Search">
         </form>
       </div>
     </div>
