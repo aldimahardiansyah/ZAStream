@@ -37,3 +37,6 @@ Route::get('/anime_list', [AnimeController::class, 'list_anime']);
 
 # cari berdasarkan status
 Route::get('/status/{status}', [AnimeController::class, 'show_by_status']);
+
+# cari berdasarkan tipe
+Route::get('/type/{type}', [AnimeController::class, 'show_by_type']);

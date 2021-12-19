@@ -93,6 +93,16 @@ class AnimeController extends Controller
         ]);
     }
 
+    public function show_by_type($type){
+        $type_id = Type::where('type', $type)->first()->id;
+        $results = Anime::where('type_id', $type_id)->get();
+        return view('search', [
+            'title' => $type,
+            'results' => $results,
+            'search' => 'Anime'
+        ]);
+    }
+
     public function list_anime(){
         return view('list_anime', [
             'title' => 'List Anime',
