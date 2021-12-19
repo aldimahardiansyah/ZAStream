@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Visitor extends Model
 {
     use HasFactory;
+
+    protected $guarded = ['id'];
+
+    public function anime(){
+        return $this->belongsTo(Anime::class);
+    }
 }

@@ -30,4 +30,9 @@ class Anime extends Model
     public function videolink(){
         return $this->hasMany(Videolink::class);
     }
+
+    # relasi ke visitor
+    public function visitor(){
+        return $this->hasOne(Visitor::class);
+    }
 }

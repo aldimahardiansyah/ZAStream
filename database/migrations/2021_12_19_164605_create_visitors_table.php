@@ -15,6 +15,8 @@ class CreateVisitorsTable extends Migration
     {
         Schema::create('visitors', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('anime_id');
+            $table->integer('sum');
             $table->timestamps();
         });
     }
