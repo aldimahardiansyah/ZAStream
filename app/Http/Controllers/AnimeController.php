@@ -8,13 +8,18 @@ use App\Models\Genre;
 use App\Models\Status;
 use App\Models\Type;
 use App\Models\Videolink;
+use App\Models\Visitor;
 use Illuminate\Http\Request;
 use Mockery\Matcher\Any;
 
 class AnimeController extends Controller
 {
     public function index(){
-        $animes = Anime::latest()->limit(6)->get();
+        $populars = Visitor::limit(6)->orderByDesc('sum')->get();
+        $animes = [];
+        foreach($populars as $popular){
+            array_push($animes, $popular->anime);
+        }
         $ongoing = Anime::where('status_id', 1)->get();
         return view('home', [
             'title' => 'Home',
@@ -27,9 +32,18 @@ class AnimeController extends Controller
 
     public function detail($id){
         $anime = Anime::find($id);
+        $visitor = Visitor::firstOrCreate(
+            ['anime_id'=> $id], 
+            ['sum'=>0]
+        );
+        $visitor->update([
+            'anime_id' => $id,
+            'sum' => $visitor->sum+1
+        ]);
         return view('detail', [
             'title' => "Detail Anime $anime->judul",
-            'anime' => $anime
+            'anime' => $anime,
+            'visitor' => $visitor
         ]);
     }
 

@@ -15,13 +15,19 @@
                 <a href="/detail/{{ $anime->id }}" class="text-decoration-none text-dark">
                   <div class="card-body">
                     <h5 class="card-title">{{ $anime->judul }}</h5>
+                    <p class="card-text">
+                      <small><a href="/status/{{ $anime->status->status }}" class="text-decoration-none {{ $anime->status_id==1?'text-danger':'text-success' }}">
+                        {{ $anime->status->status }}
+                      </a></small>
+                    </p>
+                    <a href="/detail/{{ $anime->id }}" class="card-text text-dark text-decoration-none">
+                      <p>{{ mb_strimwidth($anime->sinopsis, 0, 150, '...') }}</p>
+                    </a>
                     <div class="m-2">
                       @foreach ($anime_genres::where('anime_id', $anime->id)->get() as $anime_genre)
                           <a href="/genre/{{ $genre::find($anime_genre->genre_id)->genre }}" class="btn btn-warning btn-sm rounded-pill">{{ $genre::find($anime_genre->genre_id)->genre }}</a>
                       @endforeach
                     </div>
-                    <p class="card-text">{{ mb_strimwidth($anime->sinopsis, 0, 150, '...') }}</p>
-                    <p class="card-text"><small class="text-muted">Last updated: {{ $anime->updated_at }}</small></p>
                   </div>
               </a>
               </div>
@@ -53,10 +59,12 @@
                     </a>
                     <div class="m-2">
                       @foreach ($anime_genres::where('anime_id', $anime->id)->get() as $anime_genre)
-                          <a href="/genre/{{ $genre::find($anime_genre->genre_id)->genre }}" class="btn btn-warning btn-sm rounded-pill">{{ $genre::find($anime_genre->genre_id)->genre }}</a>
+                      <a href="/genre/{{ $genre::find($anime_genre->genre_id)->genre }}" class="btn btn-warning btn-sm rounded-pill">{{ $genre::find($anime_genre->genre_id)->genre }}</a>
                       @endforeach
                     </div>
-                    <p class="card-text">{{ mb_strimwidth($anime->sinopsis, 0, 150, '...') }}</p>
+                    <a href="/detail/{{ $anime->id }}" class="card-text text-light text-decoration-none">
+                      <p>{{ mb_strimwidth($anime->sinopsis, 0, 150, '...') }}</p>
+                    </a>
                     <p class="card-text"><small class="text-muted">Last updated: {{ $anime->updated_at }}</small></p>
                   </div>
               </div>
