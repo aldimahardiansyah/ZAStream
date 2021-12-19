@@ -98,4 +98,12 @@ class AnimeController extends Controller
             'type' => Type::class
         ]);
     }
+
+    public function list_anime(){
+        return view('list_anime', [
+            'title' => 'List Anime',
+            'animes' => Anime::all(),
+            'status' => Status::class
+        ]);
+    }
 }

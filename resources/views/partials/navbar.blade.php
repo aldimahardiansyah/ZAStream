@@ -10,7 +10,7 @@
             <a class="nav-link active" aria-current="page" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">List Anime</a>
+            <a class="nav-link" href="/anime_list">List Anime</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Genre</a>

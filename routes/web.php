@@ -31,3 +31,6 @@ Route::get('/search', [AnimeController::class, 'search']);
 
 # cari berdasarkan genre
 Route::get('/genre/{genre}', [AnimeController::class, 'show_by_genre']);
+
+# lihat list anime
+Route::get('/anime_list', [AnimeController::class, 'list_anime']);
