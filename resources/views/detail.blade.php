@@ -17,7 +17,7 @@
                 </tr>
                 <tr>
                     <td>Status</td>
-                    <td><a class="text-decoration-none" href="/status/{{ $status }}">{{ $status }}</a></td>
+                    <td><a class="text-decoration-none" href="/status/{{ $anime->status->status }}">{{ $anime->status->status }}</a></td>
                 </tr>
                 <tr>
                     <td>Rating</td>
@@ -26,14 +26,14 @@
                 <tr>
                     <td>Genre</td>
                     <td>
-                        @foreach ($genres as $genre)
-                            <a class="text-decoration-none" href="/genre/{{ $genre }}">{{ $genre }}</a>
+                        @foreach ($anime->genre as $genre)
+                            <a class="text-decoration-none" href="/genre/{{ $genre->genre }}">{{ $genre->genre }}</a>
                         @endforeach
                     </td>
                 </tr>
                 <tr>
                     <td>Type</td>
-                    <td><a class="text-decoration-none" href="/type/{{ $type }}">{{ $type }}</a></td>
+                    <td><a class="text-decoration-none" href="/type/{{ $anime->type->type }}">{{ $anime->type->type }}</a></td>
                 </tr>
             </table>
         </div>
@@ -48,7 +48,7 @@
             <h6 class="p-2 fw-bold"><i class="fa fa-play-circle text-warning" style="margin-right: 10px"></i>Nonton</h6>
             <hr>
             <div class="d-flex">
-                @foreach ($videolinks as $videolink)
+                @foreach ($anime->videolink as $videolink)
                     <a href="/watch/{{ $anime->id }}/{{ $videolink->id }}" class="btn btn-warning mx-2">Episode {{ $videolink->episode }}</a>
                 @endforeach
             </div>

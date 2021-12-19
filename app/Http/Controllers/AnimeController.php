@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 class AnimeController extends Controller
 {
     public function index(){
-        $animes = Anime::select('*')->limit(6)->get();
+        $animes = Anime::latest()->limit(6)->get();
         $ongoing = Anime::where('status_id', 1)->get();
         return view('home', [
             'title' => 'Home',
@@ -24,24 +24,11 @@ class AnimeController extends Controller
         ]);
     }
 
-    protected function genre_by_anime_id($id){
-        $anime_genre = Anime_genre::where('anime_id', $id)->get();
-        $result = [];
-        foreach($anime_genre as $genre){
-            array_push($result, Genre::find($genre->genre_id)->genre);
-        }
-        return $result;
-    }
-
     public function detail($id){
         $anime = Anime::find($id);
         return view('detail', [
             'title' => "Detail Anime $anime->judul",
-            'anime' => $anime,
-            'genres' => $this->genre_by_anime_id($id),
-            'type' => Type::find($anime->type_id)->type,
-            'status' => Status::find($anime->status_id)->status,
-            'videolinks' => Videolink::where('anime_id', $id)->get()
+            'anime' => $anime
         ]);
     }
 
@@ -76,9 +63,7 @@ class AnimeController extends Controller
         return view('search', [
             'title' => 'Hasil Pencarian',
             'results' => $results,
-            'search' => $request->search,
-            'status' => Status::class,
-            'type' => Type::class
+            'search' => $request->search
         ]);
     }
 
@@ -94,8 +79,6 @@ class AnimeController extends Controller
             'title' => "Kategori",
             'results' => $results,
             'search' => $genre,
-            'status' => Status::class,
-            'type' => Type::class
         ]);
     }
 
@@ -103,7 +86,6 @@ class AnimeController extends Controller
         return view('list_anime', [
             'title' => 'List Anime',
             'animes' => Anime::all(),
-            'status' => Status::class
         ]);
     }
 }

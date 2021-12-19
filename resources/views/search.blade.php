@@ -11,13 +11,13 @@
                         <img src="{{ $anime->cover_img }}" class="card-img-top" alt="Gambar {{ $anime->judul }}">
                         <div class="card-body px-0">
                             <h6 class="card-title">{{ $anime->judul }}</h6>
-                            <a href="/status/{{ $status::find($anime->status_id)->status }}" class="text-decoration-none">
-                                <small class="card-text">{{ $status::find($anime->status_id)->status }}</small>
+                            <a href="/status/{{ $anime->status->status }}" class="text-decoration-none">
+                                <small class="card-text">{{ $anime->status->status }}</small>
                             </a>
                         </div>
                     </a>
                     <div>
-                        <a href="/type/{{ $anime->type_id }}" class="btn btn-warning btn-sm">{{ $type::find($anime->type_id)->type }}</a>
+                        <a href="/type/{{ $anime->type_id }}" class="btn btn-warning btn-sm">{{ $anime->type->type }}</a>
                     </div>
                     </div>
                 </div>
