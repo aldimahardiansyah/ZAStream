@@ -9,6 +9,7 @@ use App\Models\Status;
 use App\Models\Type;
 use App\Models\Videolink;
 use Illuminate\Http\Request;
+use Mockery\Matcher\Any;
 
 class AnimeController extends Controller
 {
@@ -79,6 +80,16 @@ class AnimeController extends Controller
             'title' => "Kategori",
             'results' => $results,
             'search' => $genre,
+        ]);
+    }
+
+    public function show_by_status($status){
+        $status_id = Status::where('status', $status)->first()->id;
+        $results = Anime::where('status_id', $status_id)->get();
+        return view('search', [
+            'title' => $status,
+            'results' => $results,
+            'search' => 'Anime'
         ]);
     }
 
