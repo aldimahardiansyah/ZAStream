@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AnimeController;
 use Illuminate\Support\Facades\Route;
 
@@ -38,8 +39,17 @@ Route::get('/status/{status}', [AnimeController::class, 'show_by_status']);
 # cari berdasarkan tipe
 Route::get('/type/{type}', [AnimeController::class, 'show_by_type']);
 
+
+
+
 # form menambah anime
 Route::get('/admin/add/', [AnimeController::class, 'add']);
 
 # post data input
 Route::post('/create', [AnimeController::class, 'create']);
+
+# menampilkan halaman dashboard
+Route::get('/admin/dashboard', [AdminController::class, 'index']);
+
+# menampilkan seluruh data anime
+Route::get('/admin/anime', [AdminController::class, 'anime']);
