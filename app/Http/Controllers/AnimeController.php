@@ -123,4 +123,23 @@ class AnimeController extends Controller
             'animes' => Anime::all(),
         ]);
     }
+
+    public function create(Request $request){
+        $input = $request->validate([
+            'judul' => 'required',
+            'sinopsis' => 'required',
+            'rating' => 'required',
+            'cover_img' => 'required|url',
+            'status_id' => 'required|numeric',
+            'type_id' => 'required|numeric',
+            'genre_id' => 'required|numeric'
+        ]);
+
+        $create = Anime::create($input);
+        if($create){
+            echo 'success';
+        } else{
+            echo 'failed';
+        }
+    }
 }

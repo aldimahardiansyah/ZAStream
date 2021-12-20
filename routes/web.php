@@ -23,9 +23,6 @@ Route::get('/detail/{id}', [AnimeController::class, 'detail']);
 # halaman nonton
 Route::get('/watch/{anime_id}/{videolink_id}', [AnimeController::class, 'watch']);
 
-# form menambah anime
-Route::get('/admin/add/', [AnimeController::class, 'add']);
-
 # hasil search
 Route::get('/search', [AnimeController::class, 'search']);
 
@@ -40,3 +37,9 @@ Route::get('/status/{status}', [AnimeController::class, 'show_by_status']);
 
 # cari berdasarkan tipe
 Route::get('/type/{type}', [AnimeController::class, 'show_by_type']);
+
+# form menambah anime
+Route::get('/admin/add/', [AnimeController::class, 'add']);
+
+# post data input
+Route::post('/create', [AnimeController::class, 'create']);
