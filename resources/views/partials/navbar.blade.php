@@ -13,7 +13,7 @@
             <a class="nav-link" href="/anime_list">List Anime</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Genre</a>
+            <a class="nav-link" href="/genre/">Genre</a>
           </li>
 
         </ul>

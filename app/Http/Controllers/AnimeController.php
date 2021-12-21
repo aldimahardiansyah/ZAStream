@@ -25,6 +25,7 @@ class AnimeController extends Controller
             'title' => 'Home',
             'animes' => $animes,
             'ongoing' => $ongoing,
+            'movie' => Anime::where('type_id', '2')->get(),
             'genre' => Genre::class,
             'anime_genres' => Anime_genre::class
         ]);
@@ -110,6 +111,13 @@ class AnimeController extends Controller
         return view('list_anime', [
             'title' => 'List Anime',
             'animes' => Anime::all(),
+        ]);
+    }
+
+    public function list_genre(){
+        return view('genre', [
+            'title' => 'Genre List',
+            'genres' => Genre::all(),
         ]);
     }
 
