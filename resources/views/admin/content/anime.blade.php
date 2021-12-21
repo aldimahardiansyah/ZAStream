@@ -10,7 +10,7 @@ $i = 1;
     <div class="card">
         <div class="card-header d-flex justify-content-between">
           <h3 class="card-title">Manage Data Anime</h3>
-          <a href="#" class="btn btn-primary">Add Anime</a>
+          <a href="/admin/add" class="btn btn-primary">Add Anime</a>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
@@ -39,7 +39,7 @@ $i = 1;
                     <td>{{ $anime->type->type }}</td>
                     <td>
                         <a href="#" class="btn btn-warning">Edit</a>
-                        <a href="#" class="btn btn-danger">Delete</a>
+                        <a href="/anime/delete/{{ $anime->id }}" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
             @endforeach

@@ -47,19 +47,6 @@ class AnimeController extends Controller
         ]);
     }
 
-    public function add(){
-        $genre = Genre::all();
-        $status = Status::all();
-        $types = Type::all();
-
-        return view('admin.form', [
-            'title'=> 'Add Anime',
-            'genres' => $genre,
-            'statuses' => $status,
-            'types' => $types
-        ]);
-    }
-
     public function watch($anime_id, $videolink_id){
         $anime = Anime::find($anime_id);
         $last_episode = Videolink::where('anime_id', $anime_id)->max('episode');
@@ -124,22 +111,4 @@ class AnimeController extends Controller
         ]);
     }
 
-    public function create(Request $request){
-        $input = $request->validate([
-            'judul' => 'required',
-            'sinopsis' => 'required',
-            'rating' => 'required',
-            'cover_img' => 'required|url',
-            'status_id' => 'required|numeric',
-            'type_id' => 'required|numeric',
-            'genre_id' => 'required|numeric'
-        ]);
-
-        $create = Anime::create($input);
-        if($create){
-            echo 'success';
-        } else{
-            echo 'failed';
-        }
-    }
 }

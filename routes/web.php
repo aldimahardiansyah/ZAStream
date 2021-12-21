@@ -41,15 +41,18 @@ Route::get('/type/{type}', [AnimeController::class, 'show_by_type']);
 
 
 
-
 # form menambah anime
-Route::get('/admin/add/', [AnimeController::class, 'add']);
+Route::get('/admin/add/', [AdminController::class, 'add']);
 
 # post data input
-Route::post('/create', [AnimeController::class, 'create']);
+Route::post('/create', [AdminController::class, 'create']);
 
 # menampilkan halaman dashboard
 Route::get('/admin/dashboard', [AdminController::class, 'index']);
+Route::get('/admin', [AdminController::class, 'index']);
 
 # menampilkan seluruh data anime
 Route::get('/admin/anime', [AdminController::class, 'anime']);
+
+# menghapus data anime
+Route::get('/anime/delete/{id}', [AdminController::class, 'destroy_anime']);
