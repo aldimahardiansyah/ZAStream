@@ -169,5 +169,96 @@ class AnimeSeeder extends Seeder
             'genre_id' => 12
         ]);
 
+        Anime::create([
+            'judul' => 'Gintama: The Final',
+            'cover_img' => 'https://cdn.myanimelist.net/images/anime/1988/113791.jpg',
+            'sinopsis' => "Two years have passed following the Tendoshuu's invasion of the O-Edo Central Terminal. Since then, the Yorozuya have gone their separate ways. Foreseeing Utsuro's return, Gintoki Sakata begins surveying Earth's ley lines for traces of the other man's Altana. After an encounter with the remnants of the Tendoshuu—who continue to press on in search of immortality—Gintoki returns to Edo.",
+            'status_id' => 2,
+            'type_id' => 2,
+            'rating' => '9.02'
+        ]);
+        Anime_genre::create([
+            'anime_id' => 8,
+            'genre_id' => 1
+        ]);
+
+        Anime_genre::create([
+            'anime_id' => 8,
+            'genre_id' => 5
+        ]);
+
+        Anime_genre::create([
+            'anime_id' => 8,
+            'genre_id' => 8
+        ]);
+
+        Anime::create([
+            'judul' => 'Violet Evergarden Movie',
+            'cover_img' => 'https://cdn.myanimelist.net/images/anime/1825/110716.jpg',
+            'sinopsis' => "Several years have passed since the end of The Great War. As the radio tower in Leidenschaftlich continues to be built, telephones will soon become more relevant, leading to a decline in demand for 'Auto Memory Dolls.' Even so, Violet Evergarden continues to rise in fame after her constant success with writing letters. However, sometimes the one thing you long for is the one thing that does not appear.",
+            'status_id' => 2,
+            'type_id' => 2,
+            'rating' => '8.98'
+        ]);
+        Anime_genre::create([
+            'anime_id' => 9,
+            'genre_id' => 1
+        ]);
+
+        Anime_genre::create([
+            'anime_id' => 9,
+            'genre_id' => 4
+        ]);
+
+        Anime_genre::create([
+            'anime_id' => 9,
+            'genre_id' => 10
+        ]);
+
+        Anime::create([
+            'judul' => 'Koe no Katachi',
+            'cover_img' => 'https://cdn.myanimelist.net/images/anime/1122/96435.jpg',
+            'sinopsis' => "As a wild youth, elementary school student Shouya Ishida sought to beat boredom in the cruelest ways. When the deaf Shouko Nishimiya transfers into his class, Shouya and the rest of his class thoughtlessly bully her for fun. However, when her mother notifies the school, he is singled out and blamed for everything done to her.",
+            'status_id' => 2,
+            'type_id' => 2,
+            'rating' => '8.96'
+        ]);
+        Anime_genre::create([
+            'anime_id' => 10,
+            'genre_id' => 4
+        ]);
+
+        Anime_genre::create([
+            'anime_id' => 10,
+            'genre_id' => 10
+        ]);
+
+        Anime_genre::create([
+            'anime_id' => 10,
+            'genre_id' => 11
+        ]);
+
+        Anime::create([
+            'judul' => 'Kimi no Na wa',
+            'cover_img' => 'https://cdn.myanimelist.net/images/anime/5/87048.jpg',
+            'sinopsis' => "Mitsuha Miyamizu, a high school girl, yearns to live the life of a boy in the bustling city of Tokyo—a dream that stands in stark contrast to her present life in the countryside. Meanwhile in the city, Taki Tachibana lives a busy life as a high school student while juggling his part-time job and hopes for a future in architecture.",
+            'status_id' => 2,
+            'type_id' => 2,
+            'rating' => '8.89'
+        ]);
+        Anime_genre::create([
+            'anime_id' => 11,
+            'genre_id' => 4
+        ]);
+
+        Anime_genre::create([
+            'anime_id' => 11,
+            'genre_id' => 10
+        ]);
+
+        Anime_genre::create([
+            'anime_id' => 11,
+            'genre_id' => 11
+        ]);
     }
 }
