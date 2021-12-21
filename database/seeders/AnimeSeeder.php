@@ -169,5 +169,28 @@ class AnimeSeeder extends Seeder
             'genre_id' => 12
         ]);
 
+        Anime::create([
+            'judul' => 'Gintama: The Final',
+            'cover_img' => 'https://cdn.myanimelist.net/images/anime/1988/113791.jpg',
+            'sinopsis' => "Two years have passed following the Tendoshuu's invasion of the O-Edo Central Terminal. Since then, the Yorozuya have gone their separate ways. Foreseeing Utsuro's return, Gintoki Sakata begins surveying Earth's ley lines for traces of the other man's Altana. After an encounter with the remnants of the Tendoshuu—who continue to press on in search of immortality—Gintoki returns to Edo.",
+            'status_id' => 2,
+            'type_id' => 2,
+            'rating' => '9.02'
+        ]);
+        Anime_genre::create([
+            'anime_id' => 8,
+            'genre_id' => 1
+        ]);
+
+        Anime_genre::create([
+            'anime_id' => 8,
+            'genre_id' => 5
+        ]);
+
+        Anime_genre::create([
+            'anime_id' => 8,
+            'genre_id' => 8
+        ]);
+
     }
 }
