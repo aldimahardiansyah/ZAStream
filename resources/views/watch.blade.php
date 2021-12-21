@@ -9,10 +9,10 @@
     </div>
     <div class="container mt-5 mb-4 d-flex justify-content-center">
         @if ($videolink->episode != 1)
-            <a href="/watch/{{ $anime->id }}/{{ $videolink->episode-1 }}" class="btn btn-warning mx-3">< Episode Sebelumnya</a>
+            <a href="/watch/{{ $anime->id }}/{{ $prev->id }}" class="btn btn-warning mx-3">< Episode Sebelumnya</a>
         @endif
         @if ($last_episode != $videolink->episode)
-            <a href="/watch/{{ $anime->id }}/{{ $videolink->episode+1 }}" class="btn btn-warning mx-3">Episode Selanjutnya ></a>
+            <a href="/watch/{{ $anime->id }}/{{ $next->id }}" class="btn btn-warning mx-3">Episode Selanjutnya ></a>
         @endif
     </div>
 @endsection

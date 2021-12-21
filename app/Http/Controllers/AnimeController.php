@@ -55,7 +55,9 @@ class AnimeController extends Controller
             'title' => "Nonton $anime->judul episode $videolink->episode",
             'anime' => $anime,
             'videolink' => $videolink,
-            'last_episode' => $last_episode
+            'last_episode' => $last_episode,
+            'next' => Videolink::where('anime_id', $anime_id)->where('episode', $videolink->episode+1)->first(),
+            'prev' => Videolink::where('anime_id', $anime_id)->where('episode', $videolink->episode-1)->first()
         ]);
     }
 
