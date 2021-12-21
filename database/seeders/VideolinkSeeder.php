@@ -17,17 +17,133 @@ class VideolinkSeeder extends Seeder
         Videolink::create([
             'anime_id' => 1,
             'episode' => 1,
-            'link' => 'https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fweb.facebook.com%2F100062598383092%2Fvideos%2F287440353209374%2F&width=700&show_text=false&height=394&appId'
+            'link' => 'https://www.youtube.com/embed/OS6KeVt1Ve0'
         ]);
         Videolink::create([
             'anime_id' => 1,
             'episode' => 2,
-            'link' => 'https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fweb.facebook.com%2FNEKOpunh%2Fvideos%2F1106059676802258%2F&width=700&show_text=false&height=394&appId'
+            'link' => 'https://www.youtube.com/embed/OS6KeVt1Ve0'
         ]);
         Videolink::create([
             'anime_id' => 1,
             'episode' => 3,
-            'link' => 'https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fweb.facebook.com%2FNEKOpunh%2Fvideos%2F621482962236253%2F&width=700&show_text=false&height=394&appId'
+            'link' => 'https://www.youtube.com/embed/OS6KeVt1Ve0'
+        ]);
+        Videolink::create([
+            'anime_id' => 2,
+            'episode' => 1,
+            'link' => 'https://www.youtube.com/embed/_urcLzoXbok'
+        ]);
+        Videolink::create([
+            'anime_id' => 2,
+            'episode' => 2,
+            'link' => 'https://www.youtube.com/embed/_urcLzoXbok'
+        ]);
+        Videolink::create([
+            'anime_id' => 2,
+            'episode' => 3,
+            'link' => 'https://www.youtube.com/embed/_urcLzoXbok'
+        ]);
+        Videolink::create([
+            'anime_id' => 3,
+            'episode' => 1,
+            'link' => 'https://www.youtube.com/embed/RnghCw_LbdA'
+        ]);
+        Videolink::create([
+            'anime_id' => 3,
+            'episode' => 2,
+            'link' => 'https://www.youtube.com/embed/RnghCw_LbdA'
+        ]);
+        Videolink::create([
+            'anime_id' => 3,
+            'episode' => 3,
+            'link' => 'https://www.youtube.com/embed/RnghCw_LbdA'
+        ]);
+        Videolink::create([
+            'anime_id' => 4,
+            'episode' => 1,
+            'link' => 'https://www.youtube.com/embed/B8l3r8zZiCw'
+        ]);
+        Videolink::create([
+            'anime_id' => 4,
+            'episode' => 2,
+            'link' => 'https://www.youtube.com/embed/B8l3r8zZiCw'
+        ]);
+        Videolink::create([
+            'anime_id' => 4,
+            'episode' => 3,
+            'link' => 'https://www.youtube.com/embed/B8l3r8zZiCw'
+        ]);
+        Videolink::create([
+            'anime_id' => 5,
+            'episode' => 1,
+            'link' => 'https://www.youtube.com/embed/KZKQP0wTAQc'
+        ]);
+        Videolink::create([
+            'anime_id' => 5,
+            'episode' => 2,
+            'link' => 'https://www.youtube.com/embed/KZKQP0wTAQc'
+        ]);
+        Videolink::create([
+            'anime_id' => 5,
+            'episode' => 3,
+            'link' => 'https://www.youtube.com/embed/KZKQP0wTAQc'
+        ]);
+        Videolink::create([
+            'anime_id' => 6,
+            'episode' => 1,
+            'link' => 'https://www.youtube.com/embed/8i3Xvs4R0WY'
+        ]);
+        Videolink::create([
+            'anime_id' => 6,
+            'episode' => 2,
+            'link' => 'https://www.youtube.com/embed/8i3Xvs4R0WY'
+        ]);
+        Videolink::create([
+            'anime_id' => 6,
+            'episode' => 3,
+            'link' => 'https://www.youtube.com/embed/8i3Xvs4R0WY'
+        ]);
+        Videolink::create([
+            'anime_id' => 7,
+            'episode' => 1,
+            'link' => 'https://www.youtube.com/embed/tLdLTSnmnoA'
+        ]);
+
+        Videolink::create([
+            'anime_id' => 7,
+            'episode' => 2,
+            'link' => 'https://www.youtube.com/embed/tLdLTSnmnoA'
+        ]);
+
+        Videolink::create([
+            'anime_id' => 7,
+            'episode' => 3,
+            'link' => 'https://www.youtube.com/embed/tLdLTSnmnoA'
+        ]);
+
+        Videolink::create([
+            'anime_id' => 8,
+            'episode' => 1,
+            'link' => 'https://www.youtube.com/embed/GWeuZr6fT6o'
+        ]);
+
+        Videolink::create([
+            'anime_id' => 9,
+            'episode' => 1,
+            'link' => 'https://www.youtube.com/embed/BUfSen2rYQs'
+        ]);
+
+        Videolink::create([
+            'anime_id' => 10,
+            'episode' => 1,
+            'link' => 'https://www.youtube.com/embed/nfK6UgLra7g'
+        ]);
+
+        Videolink::create([
+            'anime_id' => 11,
+            'episode' => 1,
+            'link' => 'https://www.youtube.com/embed/xU47nhruN-Q'
         ]);
     }
 }
