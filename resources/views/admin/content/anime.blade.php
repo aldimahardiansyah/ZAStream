@@ -39,7 +39,7 @@ $i = 1;
                     <td>{{ $anime->type->type }}</td>
                     <td>
                         <a href="/anime/edit/{{ $anime->id }}" class="btn btn-warning">Edit</a>
-                        <a href="/anime/delete/{{ $anime->id }}" class="btn btn-danger">Delete</a>
+                        <a href="/anime/delete/{{ $anime->id }}" onclick="return confirm('Apakah Anda yakin?')" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
             @endforeach
@@ -62,4 +62,13 @@ $i = 1;
       </div>
       <!-- /.card -->
     </div>
+
+    
+    <script>
+      var msg = '{{Session::get('jsAlert')}}';
+      var exist = '{{Session::has('jsAlert')}}';
+      if(exist){
+        alert(msg);
+      }
+    </script>
       @endsection

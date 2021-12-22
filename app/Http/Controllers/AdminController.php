@@ -46,16 +46,23 @@ class AdminController extends Controller
             'rating' => 'required',
             'cover_img' => 'required|url',
             'status_id' => 'required|numeric',
-            'type_id' => 'required|numeric',
-            'genre_id' => 'required|numeric'
+            'type_id' => 'required|numeric'
         ]);
-
+        
         $create = Anime::create($input);
-        if($create){
-            return redirect('/admin/anime',302, ["<script>alert('Data berhasil ditambahkan!');</script>"]);
+        $id = $create->id;
+        foreach($request->genre_id as $id_genre){
+            $anime_genre_input = [
+                'genre_id' => $id_genre,
+                'anime_id' => $id
+            ];
+            $genre_store = Anime_genre::create($anime_genre_input);
+        }
+
+        if($create && $genre_store){
+            return redirect('/admin/anime')->with('jsAlert', 'Data berhasil ditambahkan!');
         } else{
-            echo "<script>alert('Data gagal ditambahkan!')</script>";
-            return redirect()->back()->withInput();
+            return redirect('/admin/anime')->with('jsAlert', 'Data gagal ditambahkan!');
         }
     }
 
@@ -76,17 +83,16 @@ class AdminController extends Controller
 
     public function destroy_anime($id){
         $anime = Anime::find($id);
-        $confirm = "<script>confirm('Apakah Anda yakin?');</script>";
-        echo $confirm;
 
-        if($confirm){
+        if($anime){
             $destroy = $anime->delete();
             if($destroy){
-                return redirect()->back();
+                return redirect()->back()->with('jsAlert', 'Data berhasil dihapus!');
             } else{
-                echo "<script>alert('Data gagal dihapus!')</script>";
-                return redirect()->back();
+                return redirect()->back()->with('jsAlert', 'Data gagal dihapus!');
             }
+        }else{
+            return redirect()->back()->with('jsAlert', 'Data tidak ditemukan!');
         }
     }
 
@@ -110,10 +116,10 @@ class AdminController extends Controller
         $anime_store = Anime::find($id)->update($anime_input);
 
         if($genre_store && $anime_store){
-            return redirect('/admin/anime');
+            return redirect('/admin/anime')->with('jsAlert', 'Data berhasil di edit!');
         }
         else{
-            return "Data gagal di edit!";
+            return redirect('/admin/anime')->with('jsAlert', 'Data gagal di edit!');
         }
     }
 }
