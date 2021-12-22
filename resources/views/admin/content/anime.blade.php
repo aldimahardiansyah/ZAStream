@@ -38,7 +38,7 @@ $i = 1;
                     <td>{{ $anime->rating }}</td>
                     <td>{{ $anime->type->type }}</td>
                     <td>
-                        <a href="#" class="btn btn-warning">Edit</a>
+                        <a href="/anime/edit/{{ $anime->id }}" class="btn btn-warning">Edit</a>
                         <a href="/anime/delete/{{ $anime->id }}" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>

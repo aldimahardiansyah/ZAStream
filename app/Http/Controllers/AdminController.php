@@ -30,10 +30,11 @@ class AdminController extends Controller
         $types = Type::all();
 
         return view('admin.form', [
-            'title'=> 'Add Anime',
+            'title'=> 'Tambah Anime',
             'genres' => $genre,
             'statuses' => $status,
-            'types' => $types
+            'types' => $types, 
+            'action' => '/create'
         ]);
     }
 
@@ -55,6 +56,21 @@ class AdminController extends Controller
             echo "<script>alert('Data gagal ditambahkan!')</script>";
             return redirect()->back()->withInput();
         }
+    }
+
+    public function edit_anime($id){
+        $genre = Genre::all();
+        $status = Status::all();
+        $types = Type::all();
+
+        return view('admin.form', [
+            'title'=> 'Edit Anime',
+            'genres' => $genre,
+            'statuses' => $status,
+            'types' => $types,
+            'anime' => Anime::find($id),
+            'action' => '/anime/edit'
+        ]);
     }
 
     public function destroy_anime($id){

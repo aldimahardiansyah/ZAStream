@@ -57,5 +57,8 @@ Route::get('/admin', [AdminController::class, 'index']);
 # menampilkan seluruh data anime
 Route::get('/admin/anime', [AdminController::class, 'anime']);
 
+# menampilkan form edit anime
+Route::get('/anime/edit/{id}', [AdminController::class, 'edit_anime']);
+
 # menghapus data anime
 Route::get('/anime/delete/{id}', [AdminController::class, 'destroy_anime']);
