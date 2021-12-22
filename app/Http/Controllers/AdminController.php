@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Anime;
+use App\Models\Anime_genre;
 use App\Models\Genre;
 use App\Models\Status;
 use App\Models\Type;
@@ -69,7 +70,7 @@ class AdminController extends Controller
             'statuses' => $status,
             'types' => $types,
             'anime' => Anime::find($id),
-            'action' => '/anime/edit'
+            'action' => "/anime/edit/$id"
         ]);
     }
 
@@ -86,6 +87,33 @@ class AdminController extends Controller
                 echo "<script>alert('Data gagal dihapus!')</script>";
                 return redirect()->back();
             }
+        }
+    }
+
+    public function store_anime($id, Request $request){
+        $anime_input = [
+            'judul' => $request->judul,
+            'sinopsis' => $request->sinopsis,
+            'rating' => $request->rating,
+            'cover_img' => $request->cover_img,
+            'status_id' => $request->status_id,
+            'type_id' => $request->type_id,
+        ];
+        foreach($request->genre_id as $id_genre){
+            $anime_genre_input = [
+                'genre_id' => $id_genre,
+                'anime_id' => $id
+            ];
+            $genre_store = Anime_genre::where('anime_id', $id)->first()->update($anime_genre_input);
+        }
+
+        $anime_store = Anime::find($id)->update($anime_input);
+
+        if($genre_store && $anime_store){
+            return redirect('/admin/anime');
+        }
+        else{
+            return "Data gagal di edit!";
         }
     }
 }

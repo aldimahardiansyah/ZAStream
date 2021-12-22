@@ -61,10 +61,10 @@
                 <label class="col-2">Genre</label>
                 <div class="col-10">
                     @foreach ($genres as $genre)
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" value="{{ $genre->id }}" id="{{ $genre->genre }}" name="genre_id" {{ $title=='Edit Anime'&&$anime->genre[0]->id==$genre->id?'checked':'' }}>
-                        <label for="{{ $genre->genre }}" class="form-check-label">{{ $genre->genre }}</label>
-                    </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" value="{{ $genre->id }}" id="{{ $genre->genre }}" name="genre_id[]" {{ $title=='Edit Anime'&&$anime->genre[0]->id==$genre->id?'checked':'' }}>
+                            <label for="{{ $genre->genre }}" class="form-check-label">{{ $genre->genre }}</label>
+                        </div>
                     @endforeach
                 </div>
             </div>
