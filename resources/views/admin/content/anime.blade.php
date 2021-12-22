@@ -8,9 +8,11 @@ $i = 1;
     </div>
     <div class="container">
     <div class="card">
-        <div class="card-header d-flex justify-content-between">
-          <h3 class="card-title">Manage Data Anime</h3>
-          <a href="/admin/add" class="btn btn-primary">Add Anime</a>
+        <div class="card-header d-flex row-12 align-items-center">
+          <h3 class="card-title col">Manage Data Anime</h3>
+          <div class="d-flex justify-content-end w-100 col">
+            <a href="/admin/add" class="btn btn-primary">Add Anime</a>
+          </div>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
@@ -63,7 +65,7 @@ $i = 1;
       <!-- /.card -->
     </div>
 
-    
+
     <script>
       var msg = '{{Session::get('jsAlert')}}';
       var exist = '{{Session::has('jsAlert')}}';

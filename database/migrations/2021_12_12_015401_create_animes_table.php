@@ -17,7 +17,7 @@ class CreateAnimesTable extends Migration
             $table->id();
             $table->foreignId('status_id');
             $table->foreignId('type_id');
-            $table->string('judul');
+            $table->string('judul')->unique();
             $table->string('cover_img');
             $table->text('sinopsis');
             $table->string('rating');
