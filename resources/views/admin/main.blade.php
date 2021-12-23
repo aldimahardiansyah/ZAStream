@@ -70,14 +70,14 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="/admin/dashboard" class="nav-link">
+            <a href="/admin/dashboard" class="nav-link {{ $title=='Dashboard'?'active':'' }}">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
               </p>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item {{ $title!='Dashboard'?'menu-open':'' }}">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-database"></i>
               <p>
@@ -87,31 +87,31 @@
             </a>
             <ul class="nav nav-treeview ml-3">
               <li class="nav-item">
-                <a href="/admin/anime" class="nav-link">
+                <a href="/admin/anime" class="nav-link {{ $title=='Manage Data Anime'?'active':'' }}">
                   <i class="fa fa-film nav-icon"></i>
                   <p>Anime</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
+                <a href="/admin/genre" class="nav-link {{ $title=='Manage Genre'?'active':'' }}">
                   <i class="fas fa-th-list nav-icon"></i>
                   <p>Genre</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
+                <a href="/admin/status" class="nav-link {{ $title=='Manage Status'?'active':'' }}">
                   <i class="fa fa-spinner nav-icon"></i>
                   <p>Status</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
+                <a href="/admin/type" class="nav-link {{ $title=='Manage Tipe'?'active':'' }}">
                   <i class="fa fa-layer-group nav-icon"></i>
                   <p>Type</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
+                <a href="/admin/episodes" class="nav-link {{ $title=='Manage Episode'?'active':'' }}">
                   <i class="fa fa-paperclip nav-icon"></i>
                   <p>Episodes</p>
                 </a>

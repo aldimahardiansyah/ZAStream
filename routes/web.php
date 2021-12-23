@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AnimeController;
+use App\Http\Controllers\GenreController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -65,3 +66,21 @@ Route::get('/anime/delete/{id}', [AdminController::class, 'destroy_anime']);
 
 # post data edit anime
 Route::post('/anime/edit/{id}', [AdminController::class, 'store_anime']);
+
+# menampilkan seluruh data genre
+Route::get('/admin/genre', [GenreController::class, 'all']);
+
+# menampilkan form tambah genre
+Route::get('/admin/genre/add', [GenreController::class, 'add']);
+
+# post data tambah genre
+Route::post('/admin/genre/store', [GenreController::class, 'store']);
+
+# form edit genre
+Route::get('/admin/genre/edit/{id}', [GenreController::class, 'edit']);
+
+# post edit genre
+Route::post('/admin/genre/update/{id}', [GenreController::class, 'update']);
+
+# hapus genre
+Route::get('/admin/genre/delete/{id}', [GenreController::class, 'destroy']);
