@@ -8,17 +8,24 @@ use App\Models\Genre;
 use App\Models\Status;
 use App\Models\Type;
 use App\Models\Videolink;
+use App\Models\Visitor;
 use Illuminate\Http\Request;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 class AdminController extends Controller
 {
     public function index(){
+        $visitor = 0;
+
+        foreach(Visitor::all() as $visit){
+            $visitor += $visit->sum;
+        }
         return view('admin.content.dashboard', [
             'title' => 'Dashboard',
             'anime' => Anime::all()->count(),
             'genre' => Genre::all()->count(),
-            'episode' => Videolink::all()->count()
+            'episode' => Videolink::all()->count(),
+            'visitor' => $visitor
         ]);
     }
 

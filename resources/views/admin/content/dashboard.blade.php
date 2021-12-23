@@ -67,7 +67,7 @@
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3>65</h3>
+                <h3>{{ $visitor }}</h3>
 
                 <p>Total Visitors</p>
               </div>
