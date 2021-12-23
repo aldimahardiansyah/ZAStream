@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AnimeController;
+use App\Http\Controllers\EpisodeController;
 use App\Http\Controllers\GenreController;
 use Illuminate\Support\Facades\Route;
 
@@ -84,3 +85,21 @@ Route::post('/admin/genre/update/{id}', [GenreController::class, 'update']);
 
 # hapus genre
 Route::get('/admin/genre/delete/{id}', [GenreController::class, 'destroy']);
+
+# menampilkan data episode
+Route::get('/admin/episodes', [EpisodeController::class, 'all']);
+
+# menampilkan form tambah episode
+Route::get('/admin/episode/add', [EpisodeController::class, 'add']);
+
+# post data tambah episode
+Route::post('/admin/episode/store', [EpisodeController::class, 'store']);
+
+# form edit episode
+Route::get('/admin/episode/edit/{id}', [EpisodeController::class, 'edit']);
+
+# post edit episode
+Route::post('/admin/episode/update/{id}', [EpisodeController::class, 'update']);
+
+# hapus episode
+Route::get('/admin/episode/delete/{id}', [EpisodeController::class, 'destroy']);

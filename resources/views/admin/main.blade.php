@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ZAStream | {{ $title }}</title>
 
+  <link rel="icon" href="/img/zas.png">
+
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -106,13 +108,13 @@
               </li>
               <li class="nav-item">
                 <a href="/admin/type" class="nav-link {{ $title=='Manage Tipe'?'active':'' }}">
-                  <i class="fa fa-layer-group nav-icon"></i>
+                  <i class="fa fa-paperclip nav-icon"></i>
                   <p>Type</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="/admin/episodes" class="nav-link {{ $title=='Manage Episode'?'active':'' }}">
-                  <i class="fa fa-paperclip nav-icon"></i>
+                  <i class="fa fa-layer-group nav-icon"></i>
                   <p>Episodes</p>
                 </a>
               </li>
