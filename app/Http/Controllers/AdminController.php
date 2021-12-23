@@ -7,6 +7,7 @@ use App\Models\Anime_genre;
 use App\Models\Genre;
 use App\Models\Status;
 use App\Models\Type;
+use App\Models\Videolink;
 use Illuminate\Http\Request;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
@@ -14,7 +15,10 @@ class AdminController extends Controller
 {
     public function index(){
         return view('admin.content.dashboard', [
-            'title' => 'Dashboard'
+            'title' => 'Dashboard',
+            'anime' => Anime::all()->count(),
+            'genre' => Genre::all()->count(),
+            'episode' => Videolink::all()->count()
         ]);
     }
 
