@@ -45,7 +45,7 @@ Route::get('/status/{status}', [AnimeController::class, 'show_by_status']);
 Route::get('/type/{type}', [AnimeController::class, 'show_by_type']);
 
 
-
+Route::middleware(['auth:sanctum'])->group(function(){
 # form menambah anime
 Route::get('/admin/add/', [AdminController::class, 'add']);
 
@@ -103,3 +103,8 @@ Route::post('/admin/episode/update/{id}', [EpisodeController::class, 'update']);
 
 # hapus episode
 Route::get('/admin/episode/delete/{id}', [EpisodeController::class, 'destroy']);
+});
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
