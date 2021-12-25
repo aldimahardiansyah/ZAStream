@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AnimeController;
 use App\Http\Controllers\EpisodeController;
 use App\Http\Controllers\GenreController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -46,60 +47,75 @@ Route::get('/type/{type}', [AnimeController::class, 'show_by_type']);
 
 
 
-# form menambah anime
-Route::get('/admin/add/', [AdminController::class, 'add']);
 
-# post data tambah anime
-Route::post('/create', [AdminController::class, 'create']);
+Route::middleware('auth')->group(function(){
+    # form menambah anime
+    Route::get('/admin/add/', [AdminController::class, 'add']);
+    
+    # post data tambah anime
+    Route::post('/create', [AdminController::class, 'create']);
 
-# menampilkan halaman dashboard
-Route::get('/admin/dashboard', [AdminController::class, 'index']);
-Route::get('/admin', [AdminController::class, 'index']);
+    # menampilkan halaman dashboard
+    Route::get('/admin/dashboard', [AdminController::class, 'index']);
+    Route::get('/admin', [AdminController::class, 'index']);
 
-# menampilkan seluruh data anime
-Route::get('/admin/anime', [AdminController::class, 'anime']);
+    # menampilkan seluruh data anime
+    Route::get('/admin/anime', [AdminController::class, 'anime']);
 
-# menampilkan form edit anime
-Route::get('/anime/edit/{id}', [AdminController::class, 'edit_anime']);
+    # menampilkan form edit anime
+    Route::get('/anime/edit/{id}', [AdminController::class, 'edit_anime']);
 
-# menghapus data anime
-Route::get('/anime/delete/{id}', [AdminController::class, 'destroy_anime']);
+    # menghapus data anime
+    Route::get('/anime/delete/{id}', [AdminController::class, 'destroy_anime']);
 
-# post data edit anime
-Route::post('/anime/edit/{id}', [AdminController::class, 'store_anime']);
+    # post data edit anime
+    Route::post('/anime/edit/{id}', [AdminController::class, 'store_anime']);
 
-# menampilkan seluruh data genre
-Route::get('/admin/genre', [GenreController::class, 'all']);
+    # menampilkan seluruh data genre
+    Route::get('/admin/genre', [GenreController::class, 'all']);
 
-# menampilkan form tambah genre
-Route::get('/admin/genre/add', [GenreController::class, 'add']);
+    # menampilkan form tambah genre
+    Route::get('/admin/genre/add', [GenreController::class, 'add']);
 
-# post data tambah genre
-Route::post('/admin/genre/store', [GenreController::class, 'store']);
+    # post data tambah genre
+    Route::post('/admin/genre/store', [GenreController::class, 'store']);
 
-# form edit genre
-Route::get('/admin/genre/edit/{id}', [GenreController::class, 'edit']);
+    # form edit genre
+    Route::get('/admin/genre/edit/{id}', [GenreController::class, 'edit']);
 
-# post edit genre
-Route::post('/admin/genre/update/{id}', [GenreController::class, 'update']);
+    # post edit genre
+    Route::post('/admin/genre/update/{id}', [GenreController::class, 'update']);
 
-# hapus genre
-Route::get('/admin/genre/delete/{id}', [GenreController::class, 'destroy']);
+    # hapus genre
+    Route::get('/admin/genre/delete/{id}', [GenreController::class, 'destroy']);
 
-# menampilkan data episode
-Route::get('/admin/episodes', [EpisodeController::class, 'all']);
+    # menampilkan data episode
+    Route::get('/admin/episodes', [EpisodeController::class, 'all']);
 
-# menampilkan form tambah episode
-Route::get('/admin/episode/add', [EpisodeController::class, 'add']);
+    # menampilkan form tambah episode
+    Route::get('/admin/episode/add', [EpisodeController::class, 'add']);
 
-# post data tambah episode
-Route::post('/admin/episode/store', [EpisodeController::class, 'store']);
+    # post data tambah episode
+    Route::post('/admin/episode/store', [EpisodeController::class, 'store']);
 
-# form edit episode
-Route::get('/admin/episode/edit/{id}', [EpisodeController::class, 'edit']);
+    # form edit episode
+    Route::get('/admin/episode/edit/{id}', [EpisodeController::class, 'edit']);
 
-# post edit episode
-Route::post('/admin/episode/update/{id}', [EpisodeController::class, 'update']);
+    # post edit episode
+    Route::post('/admin/episode/update/{id}', [EpisodeController::class, 'update']);
 
-# hapus episode
-Route::get('/admin/episode/delete/{id}', [EpisodeController::class, 'destroy']);
+    # hapus episode
+    Route::get('/admin/episode/delete/{id}', [EpisodeController::class, 'destroy']);
+
+    # logout
+    Route::post('/admin/logout', [LoginController::class, 'logout']);
+
+});
+
+Route::middleware('guest')->group(function(){
+    # login form
+    Route::get('/admin/login', [LoginController::class, 'index'])->middleware('guest')->name('login');
+
+    # login post
+    Route::post('/admin/login', [LoginController::class, 'authenticate']);
+});
