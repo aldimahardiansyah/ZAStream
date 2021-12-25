@@ -12,6 +12,8 @@
             </div>
         @endif
 
+        <p class="text-center fs-3">Admin Login</p>
+        <br/>
         <form method="POST" action="{{ route('login') }}">
             @csrf
 
