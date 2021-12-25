@@ -7,7 +7,8 @@
 
   <link rel="icon" href="/img/zas.png">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> --}}
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -43,20 +44,10 @@
     </ul>
 
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Welcome back, {{ auth()->user()->name }}
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li><a class="dropdown-item" href="#">My Profile</a></li>
-          <li><hr class="dropdown-divider"></li>
-          <li>
-            <form action="/admin/logout" method="post">
-              @csrf
-              <button type="submit" class="dropdown-item"><i class="fa fa-sign-out-alt"></i> Logout</button>
-            </form>
-        </ul>
-      </li>
+      <form action="/admin/logout" method="post">
+        @csrf
+        <button type="submit" class="dropdown-item"><i class="fa fa-sign-out-alt"></i> Logout</button>
+      </form>
     </ul>
 
   </nav>
@@ -75,10 +66,10 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="/AdminLTE/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="/AdminLTE/dist/img/avatar4.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block">{{ auth()->user()->name }}</a>
         </div>
       </div>
 
@@ -95,11 +86,11 @@
               </p>
             </a>
           </li>
-          <li class="nav-item {{ $title!='Dashboard'?'menu-open':'' }}">
+          <li class="nav-item {{ $title!='Dashboard'&&$title!='Manage Data User'?'menu-open':'' }}">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-database"></i>
               <p>
-                Manage Data
+                Main Data
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
@@ -117,24 +108,21 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/admin/status" class="nav-link {{ $title=='Manage Status'?'active':'' }}">
-                  <i class="fa fa-spinner nav-icon"></i>
-                  <p>Status</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="/admin/type" class="nav-link {{ $title=='Manage Tipe'?'active':'' }}">
-                  <i class="fa fa-paperclip nav-icon"></i>
-                  <p>Type</p>
-                </a>
-              </li>
-              <li class="nav-item">
                 <a href="/admin/episodes" class="nav-link {{ $title=='Manage Episode'?'active':'' }}">
                   <i class="fa fa-layer-group nav-icon"></i>
                   <p>Episodes</p>
                 </a>
               </li>
             </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="/admin/users" class="nav-link {{ $title=='Manage Data User'?'active':'' }}">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Users
+              </p>
+            </a>
           </li>
         </ul>
       </nav>

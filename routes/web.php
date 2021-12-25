@@ -5,6 +5,7 @@ use App\Http\Controllers\AnimeController;
 use App\Http\Controllers\EpisodeController;
 use App\Http\Controllers\GenreController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -106,6 +107,24 @@ Route::middleware('auth')->group(function(){
 
     # hapus episode
     Route::get('/admin/episode/delete/{id}', [EpisodeController::class, 'destroy']);
+
+    # menampilkan seluruh data user
+    Route::get('/admin/users', [UserController::class, 'all']);
+
+    # menampilkan form tambah user
+    Route::get('/admin/user/add', [UserController::class, 'add']);
+
+    # post data tambah user
+    Route::post('/admin/user/store', [UserController::class, 'store']);
+
+    # form edit user
+    Route::get('/admin/user/edit/{id}', [UserController::class, 'edit']);
+
+    # post edit user
+    Route::post('/admin/user/update/{id}', [UserController::class, 'update']);
+
+    # hapus user
+    Route::get('/admin/user/delete/{id}', [UserController::class, 'destroy']);
 
     # logout
     Route::post('/admin/logout', [LoginController::class, 'logout']);

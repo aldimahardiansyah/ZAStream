@@ -21,7 +21,8 @@ class DatabaseSeeder extends Seeder
             StatusSeeder::class, 
             TypeSeeder::class, 
             VideolinkSeeder::class,
-            VisitorSeeder::class
+            VisitorSeeder::class,
+            UserSeeder::class
         ]);
     }
 }
