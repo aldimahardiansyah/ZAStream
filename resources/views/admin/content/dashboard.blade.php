@@ -80,39 +80,6 @@
           <!-- ./col -->
         </div>
         <!-- /.row -->
-        <!-- Main row -->
-        <div class="row">
-          <!-- right col (We are only adding the ID to make the widgets sortable)-->
-          <section class="col-lg-5 connectedSortable">
-              <!-- Bar chart -->
-
-            <div class="card card-primary card-outline">
-                <div class="card-header">
-                  <h3 class="card-title">
-                    <i class="far fa-chart-bar"></i>
-                    Top 6 Most Visited Anime
-                  </h3>
-  
-                  <div class="card-tools">
-                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                      <i class="fas fa-minus"></i>
-                    </button>
-                    <button type="button" class="btn btn-tool" data-card-widget="remove">
-                      <i class="fas fa-times"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <div id="bar-chart" style="height: 300px;"></div>
-                </div>
-                <!-- /.card-body-->
-              </div>
-              <!-- /.card -->
-
-          </section>
-          <!-- right col -->
-        </div>
-        <!-- /.row (main row) -->
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
