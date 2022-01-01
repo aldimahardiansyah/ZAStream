@@ -21,8 +21,7 @@ class AnimeSeeder extends Seeder
             'cover_img' => '',
             'sinopsis' => '',
             'status_id' => ,
-            'type_id' => ,
-            'rating' => ''
+            'type_id' => 
         ]);
         Anime_genre::create([
             'anime_id' => ,
@@ -35,8 +34,7 @@ class AnimeSeeder extends Seeder
             'cover_img' => 'https://nimegami.com/wp-content/uploads/2021/10/Mushoku-Tensei-Isekai-Ittara-Honki-Dasu-Season-2-Sub-Indo1.jpg',
             'sinopsis' => 'Tewas saat menyelamatkan orang asing dari tabrakan lalu lintas, NEET berusia 34 tahun bereinkarnasi ke dunia sihir sebagai Rudeus Greyrat, bayi yang baru lahir. Dengan pengetahuan, pengalaman, dan penyesalan dari kehidupan sebelumnya yang dipertahankan, Rudeus bersumpah untuk menjalani hidup yang memuaskan dan tidak mengulangi kesalahan masa lalunya. Sekarang diberkahi dengan kekuatan magis yang luar biasa serta pikiran orang dewasa yang sudah dewasa, Rudeus dipandang sebagai jenius dalam pembuatan oleh orang tua barunya. Segera, dia mendapati dirinya belajar di bawah para pejuang yang kuat, seperti ayah pendekar pedang dan seorang penyihir bernama Roxy Migurdia — semuanya untuk mengasah bakatnya yang tampak. Tapi meski eksteriornya polos, Rudeus tetaplah seorang otaku mesum, yang menggunakan kekayaan pengetahuannya untuk membuat gerakan pada wanita yang tidak pernah bisa dia buat di kehidupan sebelumnya. [Ditulis oleh MAL Tulis Ulang]',
             'status_id' => 1,
-            'type_id' => 1,
-            'rating' => '8.35'
+            'type_id' => 1
         ]);
         Anime_genre::create([
             'anime_id' => 1,
@@ -52,8 +50,7 @@ class AnimeSeeder extends Seeder
             'cover_img' => 'https://cdn.myanimelist.net/images/manga/1/222486.jpg',
             'sinopsis' => '“Aku akan hidup untuk diriku sendiri!” Pembunuh terhebat di Bumi hanya tahu bagaimana hidup sebagai alat bagi majikannya—sampai mereka berhenti membiarkannya hidup. Dilahirkan kembali oleh anugerah seorang dewi ke dunia pedang dan sihir, dia ditawari kesempatan untuk melakukan hal-hal yang berbeda kali ini, tapi ada masalah… Dia harus melenyapkan pahlawan super kuat yang akan membawa akhir dunia kecuali dia dihentikan. Sekarang dikenal sebagai Lugh Tuatha Dé, sang master assassin pasti sangat sibuk, terutama karena semua gadis cantik yang terus-menerus mengelilinginya. Lugh mungkin adalah pembunuh yang tak tertandingi, tetapi bagaimana dia akan melawan musuh dengan sihir yang kuat? (Sumber: Yen Press)',
             'status_id' => 1,
-            'type_id' => 1,
-            'rating' => '7.09'
+            'type_id' => 1
         ]);
         Anime_genre::create([
             'anime_id' => 2,
@@ -71,8 +68,7 @@ class AnimeSeeder extends Seeder
             Setelah dipaksa untuk menghidupkan kembali hari yang sama yang memulai spiral ke bawah, Takemichi bertemu dengan adik Hinata. Tanpa berpikir, dia mengakui kematiannya sebelum kembali ke masa lalu. Takemichi mendesak dia untuk melindungi adiknya sebelum entah kenapa kembali ke masa depan. Ajaibnya, dia tidak mati. Lebih aneh lagi, masa depan telah berubah. Sepertinya Takemichi dapat mengubah aliran waktu. Diberi kesempatan untuk mencegah kematian tragis mantan pacarnya di tangan Geng Tokyo Manji, Takemichi memutuskan untuk terbang melintasi waktu untuk mengubah arah masa depan.
             [Ditulis oleh MAL Penulisan Ulang]',
             'status_id' => 2,
-            'type_id' => 1,
-            'rating' => '8.26'
+            'type_id' => 1
         ]);
         Anime_genre::create([
             'anime_id' => 3,
@@ -94,8 +90,7 @@ class AnimeSeeder extends Seeder
             Akira bertekad untuk memenangkan permainan dengan kekuatan barunya dan menghancurkan organisasi. Berbekal kekuatan yang tidak diharapkan siapa pun dan keterampilan "otaknya", periode baru pertempuran intelijen dimulai!
             (Sumber: MU, diedit)',
             'status_id' => 2,
-            'type_id' => 1,
-            'rating' => '6.83'
+            'type_id' => 1
         ]);
         Anime_genre::create([
             'anime_id' => 4,
@@ -112,8 +107,7 @@ class AnimeSeeder extends Seeder
             'sinopsis' => 'Dunia telah dilanda perang putus asa selama tiga dekade melawan BETA — spesies asing yang menginvasi planet ini pada tahun 1973. Di tengah kekacauan ini, seorang siswa sekolah menengah bernama Takeru Shirogane tiba-tiba terbangun dari mimpi buruk yang mengerikan di mana dia melihat manusia dalam kekalahan total. Segera setelah itu, dia menyadari bahwa mimpinya tidak lebih dari ingatan hidupnya di alam semesta alternatif. Dalam ingatan itu, proyek Alternatif V dilaksanakan, mengirim ratusan ribu orang ke luar angkasa sebagai upaya terakhir untuk melestarikan umat manusia, sementara meninggalkan miliaran yang tersisa di Bumi untuk mengalami nasib yang kejam. Kerinduan untuk mengubah masa depan yang suram ini, Takeru bergabung dengan pangkalan militer di Yokohama, yang kebetulan adalah bekas sekolah menengahnya. Di sana, dia berhasil meyakinkan wakil komandan pangkalan dan pemimpin proyek Alternatif IV, Profesor Yuuko Kouzuki, untuk mencegah Terjadinya Alternatif V. Untuk memastikan keberhasilan Alternatif IV, Takeru harus mengemudikan mesin humanoid raksasa Tactical Surface Fighters (TSF) bersama rekan-rekan tarunanya. Namun, dia hanya memiliki waktu dua bulan untuk menyelesaikan pelatihannya dan memanfaatkan sebagian pengetahuannya tentang masa depan — jangan sampai tragedi berikutnya terjadi.
             [Ditulis oleh MAL Penulisan Ulang]',
             'status_id' => 1,
-            'type_id' => 1,
-            'rating' => '5.99'
+            'type_id' => 1
         ]);
         Anime_genre::create([
             'anime_id' => 5,
@@ -136,8 +130,7 @@ class AnimeSeeder extends Seeder
             Sebuah rahasia terletak di balik topeng ujian transparan kecakapan tempur yang diklaim turnamen—salah satu yang memiliki kandidat politik Korea Park Mu-Jin yang menonton setiap pertarungan dengan mata penuh harap dan lapar. Mo-Ri, Dae-Wi, dan Mi-Ra akan menemukan apa artinya menjadi Dewa SMA.
             [Ditulis oleh MAL Penulisan Ulang]',
             'status_id' => 2,
-            'type_id' => 1,
-            'rating' => '7.06'
+            'type_id' => 1
         ]);
         Anime_genre::create([
             'anime_id' => 6,
@@ -157,8 +150,7 @@ class AnimeSeeder extends Seeder
             'cover_img' => 'https://cdn.myanimelist.net/images/anime/1899/117237l.jpg?_gl=1*ppx142*_ga*MTA4NTQ0ODE1NC4xNjM5MjkxNzE1*_ga_26FEP9527K*MTYzOTc4MzIxMi40LjEuMTYzOTc4MzI0My4yOQ..',
             'sinopsis' => 'Komi-san wa, Comyushou desu. menceritakan tentang: Ini merupakan hari pertama Shouko Komi di SMA Itan yang bergengsi. Dengan rambut hitam panjang, tinggi dan penampilannya yang anggun, Komi langsung menarik perhatian siapa pun yang bertemu dengannya. Namun, Komi memiliki satu masalah, dia sangat buruk dalam berkomunikasi dengan orang lain.Hitohito Tadano, seorang siswa biasa yang memiliki moto “membaca situasi dan hindari masalah”, tapi dia segera menyadari posisi duduknya yang di samping Komi telah membuatnya menjadi musuh semua orang di kelasnya. Suatu hari, karena suatu hal ia berada di ruang kelas dan hanya berduaan saja dengan Komi. Ia menyadari Komi tak memiliki satu pun teman karena tidakk dapat berkomunikasi dengan baik. Sejak saait itu, Tadano memutuskan membantu Komi dalam berkomunikasi hingga ia bisa mendapatkan 100 teman. Begitulah kisah remaja sekolah yang tidak biasa ini dimulai.hanya membaca cerita membuat sudah tidak sabar untuk nonton Komi-san wa, Comyushou desu. sub indo bukan?',
             'status_id' => 1,
-            'type_id' => 1,
-            'rating' => '8.26'
+            'type_id' => 1
         ]);
         Anime_genre::create([
             'anime_id' => 7,
@@ -174,8 +166,7 @@ class AnimeSeeder extends Seeder
             'cover_img' => 'https://cdn.myanimelist.net/images/anime/1988/113791.jpg',
             'sinopsis' => "Two years have passed following the Tendoshuu's invasion of the O-Edo Central Terminal. Since then, the Yorozuya have gone their separate ways. Foreseeing Utsuro's return, Gintoki Sakata begins surveying Earth's ley lines for traces of the other man's Altana. After an encounter with the remnants of the Tendoshuu—who continue to press on in search of immortality—Gintoki returns to Edo.",
             'status_id' => 2,
-            'type_id' => 2,
-            'rating' => '9.02'
+            'type_id' => 2
         ]);
         Anime_genre::create([
             'anime_id' => 8,
@@ -197,8 +188,7 @@ class AnimeSeeder extends Seeder
             'cover_img' => 'https://cdn.myanimelist.net/images/anime/1825/110716.jpg',
             'sinopsis' => "Several years have passed since the end of The Great War. As the radio tower in Leidenschaftlich continues to be built, telephones will soon become more relevant, leading to a decline in demand for 'Auto Memory Dolls.' Even so, Violet Evergarden continues to rise in fame after her constant success with writing letters. However, sometimes the one thing you long for is the one thing that does not appear.",
             'status_id' => 2,
-            'type_id' => 2,
-            'rating' => '8.98'
+            'type_id' => 2
         ]);
         Anime_genre::create([
             'anime_id' => 9,
@@ -220,8 +210,7 @@ class AnimeSeeder extends Seeder
             'cover_img' => 'https://cdn.myanimelist.net/images/anime/1122/96435.jpg',
             'sinopsis' => "As a wild youth, elementary school student Shouya Ishida sought to beat boredom in the cruelest ways. When the deaf Shouko Nishimiya transfers into his class, Shouya and the rest of his class thoughtlessly bully her for fun. However, when her mother notifies the school, he is singled out and blamed for everything done to her.",
             'status_id' => 2,
-            'type_id' => 2,
-            'rating' => '8.96'
+            'type_id' => 2
         ]);
         Anime_genre::create([
             'anime_id' => 10,
@@ -243,8 +232,7 @@ class AnimeSeeder extends Seeder
             'cover_img' => 'https://cdn.myanimelist.net/images/anime/5/87048.jpg',
             'sinopsis' => "Mitsuha Miyamizu, a high school girl, yearns to live the life of a boy in the bustling city of Tokyo—a dream that stands in stark contrast to her present life in the countryside. Meanwhile in the city, Taki Tachibana lives a busy life as a high school student while juggling his part-time job and hopes for a future in architecture.",
             'status_id' => 2,
-            'type_id' => 2,
-            'rating' => '8.89'
+            'type_id' => 2
         ]);
         Anime_genre::create([
             'anime_id' => 11,

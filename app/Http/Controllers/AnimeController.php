@@ -44,7 +44,26 @@ class AnimeController extends Controller
         return view('detail', [
             'title' => "Detail Anime $anime->judul",
             'anime' => $anime,
-            'visitor' => $visitor
+            'visitor' => $visitor,
+            'is_watched' => false
+        ]);
+    }
+
+    public function detail_after_watch($id){
+        $anime = Anime::find($id);
+        $visitor = Visitor::firstOrCreate(
+            ['anime_id'=> $id], 
+            ['sum'=>0]
+        );
+        $visitor->update([
+            'anime_id' => $id,
+            'sum' => $visitor->sum+1
+        ]);
+        return view('detail', [
+            'title' => "Detail Anime $anime->judul",
+            'anime' => $anime,
+            'visitor' => $visitor,
+            'is_watched' => true
         ]);
     }
 

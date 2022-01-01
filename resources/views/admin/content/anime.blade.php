@@ -37,7 +37,18 @@ $i = 1;
                     <td><img src="{{ $anime->cover_img }}" alt="{{ $anime->cover_img }}" width="87px"></td>
                     <td>{{ $anime->sinopsis }}</td>
                     <td>{{ $anime->status->status }}</td>
-                    <td>{{ $anime->rating }}</td>
+                    <td>
+                            <?php
+                                $count = 0;
+                                $result = 0;
+
+                                foreach ($anime->rating as $rating) {
+                                    $count += 1;
+                                    $result += $rating->score;
+                                }
+                            ?>
+                      {{ round($result/$count, 1) }}
+                    </td>
                     <td>{{ $anime->type->type }}</td>
                     <td>
                         <a href="/anime/edit/{{ $anime->id }}" class="btn btn-warning">Edit</a>

@@ -5,6 +5,7 @@ use App\Http\Controllers\AnimeController;
 use App\Http\Controllers\EpisodeController;
 use App\Http\Controllers\GenreController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RatingController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,6 +25,9 @@ Route::get('/', [AnimeController::class, 'index']);
 
 # menampilkan detail anime
 Route::get('/detail/{id}', [AnimeController::class, 'detail']);
+
+# menampilkan detail anime beserta input rating
+Route::get('/detail/{id}/back', [AnimeController::class, 'detail_after_watch']);
 
 # halaman nonton
 Route::get('/watch/{anime_id}/{videolink_id}', [AnimeController::class, 'watch']);
@@ -45,6 +49,8 @@ Route::get('/status/{status}', [AnimeController::class, 'show_by_status']);
 
 # cari berdasarkan tipe
 Route::get('/type/{type}', [AnimeController::class, 'show_by_type']);
+
+Route::post('/rating/create', [RatingController::class, 'create']);
 
 
 

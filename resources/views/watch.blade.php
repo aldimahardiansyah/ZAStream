@@ -1,6 +1,9 @@
 @extends('main')
 
 @section('content')
+    <div class="px-3">
+        <a href="/detail/{{ $anime->id }}/back" class="btn btn-warning"><- Kembali ke detail</a>
+    </div>
     <div>
         <h4 class="text-center py-3">Nonton Anime {{ $anime->judul }} episode {{ $videolink->episode }}</h4>
     </div>

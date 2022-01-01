@@ -26,12 +26,6 @@
                 </div>
             </div>
             <div class="mb-3 row-12 d-sm-flex">
-                <label for="rating" class="col-form-label col-sm-2">Rating</label>
-                <div class="col-sm-10">
-                    <input type="text" {{ $title=='Edit Anime'?"value=$anime->rating":'' }} class="form-control" placeholder="ex: 8.1"  id="rating" name="rating">
-                </div>
-            </div>
-            <div class="mb-3 row-12 d-sm-flex">
                 <label for="cover_img" class="col-form-label col-sm-2">Thumbnail</label>
                 <div class="col-sm-10">
                     <input type="url" class="form-control" id="cover_img" name="cover_img" {{ $title=='Edit Anime'?"value=$anime->cover_img":'' }}>

@@ -35,4 +35,9 @@ class Anime extends Model
     public function visitor(){
         return $this->hasOne(Visitor::class);
     }
+
+    # relasi ke rating
+    public function rating(){
+        return $this->hasMany(Rating::class);
+    }
 }
